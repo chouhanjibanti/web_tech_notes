@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+       body{
+        padding: 12px;
+        transition: background-color 0.5 ease;
+       }
+
+       @media screen {
+        body::before{
+            content: "This is visible now for screen only";
+            display: block;
+            font-weight: bolder;
+        }
+       }
+
+       @media print{
+        body{
+           background-color: white;
+           color: brown;
+        }
+        body::after{
+            content: "This is print only page";
+            display: block;
+            font-weight: bolder;
+        }
+         }
+
+         /* @media(min-width: 600px){
+            body{
+                background-color: pink;
+            }
+         }
+
+         @media(max-width: 400px){
+            body{
+                background-color: blueviolet;
+                color: navy;
+            }
+         } */
+
+         @media(min-width: 400px) and (max-width: 600px){
+            body{
+                background-color: brown;
+                color: pink;
+            }
+         }
+    </style>
+  </head>
+  <body>
+       <h1>Media Quary</h1>
+ 
+    <h2>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt unde ullam
+      perspiciatis dolore accusantium exercitationem illo vitae iste. Hic
+      dignissimos ex neque odio excepturi error molestiae cupiditate rem animi
+      vitae!
+    </h2>
+
+    
+  </body>
+</html>
